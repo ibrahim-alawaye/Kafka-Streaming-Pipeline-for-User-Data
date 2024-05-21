@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  zookeeper:
+    extends:
+      file: ./zookeeper.yml
+      service: zookeeper
+
+  broker:
+    extends:
+      file: ./kafka.yml
+      service: broker
+
+  schema-registry:
+    extends:
+      file: ./kafka.yml
+      service: schema-registry
+
+  control-center:
+    extends:
+      file: ./kafka.yml
+      service: control-center
+
+  webserver:
+    extends:
+      file: ./airflow_spark_cassandra.yml
+      service: webserver
+
+  scheduler:
+    extends:
+      file: ./airflow_spark_cassandra.yml
+      service: scheduler
+
+  postgres:
+    extends:
+      file: ./airflow_spark_cassandra.yml
+      service: postgres
+
+  spark-master:
+    extends:
+      file: ./airflow_spark_cassandra.yml
+      service: spark-master
+
+  spark-worker:
+    extends:
+      file: ./airflow_spark_cassandra.yml
+      service: spark-worker
+
+  cassandra_db:
+    extends:
+      file: ./airflow_spark_cassandra.yml
+      service: cassandra_db
+
+networks:
+  confluent:
+    external: true

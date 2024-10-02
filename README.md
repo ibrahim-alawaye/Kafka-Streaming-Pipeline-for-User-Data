@@ -34,7 +34,6 @@ The architecture leverages several components:
 
 - Implementing fault tolerance and retries in the data fetching process.
 - Scaling the architecture to handle larger data streams.
-- Introducing machine learning models for user data analytics.
 
 ---
 

@@ -13,7 +13,7 @@ The pipeline consists of the following steps:
 
 ## Architecture
 
-The architecture leverages several components:
+The architecture use Docker to spin infrastructure and leverages several components:
 
 - **API Data Source**: Fetches user data using Airflow.
 - **Kafka**: Streams the processed user data.
